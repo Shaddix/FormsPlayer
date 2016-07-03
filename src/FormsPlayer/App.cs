@@ -13,14 +13,14 @@ namespace Xamarin.Forms.Player
 	/// </summary>
 	public class App : Application
 	{
-	    private AppController _controller;
+	    AppController controller;
 
 	    /// <summary>
 		/// Initializes the application.
 		/// </summary>
 		public App ()
 		{
-            _controller = new AppController(this);
+            controller = new AppController(this);
 		}
         
 		/// <summary>
@@ -28,7 +28,7 @@ namespace Xamarin.Forms.Player
 		/// </summary>
 		protected override void OnStart ()
 		{
-			_controller.OnStart();
+			controller.OnStart();
 		}
 
 		/// <summary>
@@ -36,7 +36,7 @@ namespace Xamarin.Forms.Player
 		/// </summary>
 		protected override void OnSleep ()
 		{
-			_controller.OnSleep();
+			controller.OnSleep();
 		}
 
 		/// <summary>
@@ -44,7 +44,7 @@ namespace Xamarin.Forms.Player
 		/// </summary>
 		protected override void OnResume ()
 		{
-			_controller.OnResume();
+			controller.OnResume();
 		}
 	}
 }
